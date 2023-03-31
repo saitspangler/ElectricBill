@@ -36,6 +36,13 @@
             txtLastName = new TextBox();
             txtkWh = new TextBox();
             btnBill = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            txtTotalCust = new TextBox();
+            txtAvgBill = new TextBox();
+            txtKWHUsed = new TextBox();
             SuspendLayout();
             // 
             // lbCustomers
@@ -45,7 +52,7 @@
             lbCustomers.Location = new Point(59, 227);
             lbCustomers.Margin = new Padding(4, 3, 4, 3);
             lbCustomers.Name = "lbCustomers";
-            lbCustomers.Size = new Size(551, 175);
+            lbCustomers.Size = new Size(872, 175);
             lbCustomers.TabIndex = 0;
             lbCustomers.Tag = "Customer List";
             // 
@@ -119,11 +126,78 @@
             btnBill.UseVisualStyleBackColor = true;
             btnBill.Click += btnBill_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(369, 182);
+            label1.Name = "label1";
+            label1.Size = new Size(129, 19);
+            label1.TabIndex = 9;
+            label1.Text = "List of Accounts";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(97, 441);
+            label2.Name = "label2";
+            label2.Size = new Size(159, 19);
+            label2.TabIndex = 10;
+            label2.Text = "Total Customers";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(393, 441);
+            label3.Name = "label3";
+            label3.Size = new Size(149, 19);
+            label3.TabIndex = 11;
+            label3.Text = "Total kWh Used";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(697, 441);
+            label4.Name = "label4";
+            label4.Size = new Size(129, 19);
+            label4.TabIndex = 12;
+            label4.Text = "Average Bill";
+            // 
+            // txtTotalCust
+            // 
+            txtTotalCust.Location = new Point(97, 484);
+            txtTotalCust.Name = "txtTotalCust";
+            txtTotalCust.ReadOnly = true;
+            txtTotalCust.Size = new Size(159, 26);
+            txtTotalCust.TabIndex = 13;
+            // 
+            // txtAvgBill
+            // 
+            txtAvgBill.Location = new Point(697, 484);
+            txtAvgBill.Name = "txtAvgBill";
+            txtAvgBill.ReadOnly = true;
+            txtAvgBill.Size = new Size(121, 26);
+            txtAvgBill.TabIndex = 14;
+            // 
+            // txtKWHUsed
+            // 
+            txtKWHUsed.Location = new Point(393, 484);
+            txtKWHUsed.Name = "txtKWHUsed";
+            txtKWHUsed.ReadOnly = true;
+            txtKWHUsed.Size = new Size(129, 26);
+            txtKWHUsed.TabIndex = 15;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(664, 710);
+            ClientSize = new Size(1010, 710);
+            Controls.Add(txtKWHUsed);
+            Controls.Add(txtAvgBill);
+            Controls.Add(txtTotalCust);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(btnBill);
             Controls.Add(txtkWh);
             Controls.Add(txtLastName);
@@ -150,5 +224,12 @@
         private TextBox txtLastName;
         private TextBox txtkWh;
         private Button btnBill;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private TextBox txtTotalCust;
+        private TextBox txtAvgBill;
+        private TextBox txtKWHUsed;
     }
 }

@@ -1,25 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ElectricBill
+﻿namespace Customers
 {
     public class CustomerData
     {
+     /*
+     * Class to store Customer Data and perform necessary calculations for electic bill
+     * 
+     * Author: Peter
+     * 
+     * When: April 2023
+     * 
+     */
         public int AccountNo { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public decimal kWhUsed { get; set; }
         public decimal BillAmount { get; set; }
 
-        public CustomerData(int accountNo, string firstName, string lastName, decimal kWhUsed)
+        public CustomerData(int accountNo, string firstName, string lastName, decimal KWHUsed)
         {
             AccountNo = accountNo;
             FirstName = firstName;
             LastName = lastName;
-            this.kWhUsed = kWhUsed;
+            kWhUsed = KWHUsed;
             BillAmount = CalculateCharge();
         }
 
