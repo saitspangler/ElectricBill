@@ -5,6 +5,7 @@ namespace ElectricBill_Test
     [TestClass]
     public class CustomerTest
     {
+        //testing calculate charge function
         [TestMethod]
         public void TestCalculateCharge()
         {
@@ -21,6 +22,7 @@ namespace ElectricBill_Test
             Assert.AreEqual(expected, actual);
         }
 
+        //testing that customerdata is correctly formatted in a tostring method
         [TestMethod]
         public void TestToString()
         {
@@ -37,6 +39,7 @@ namespace ElectricBill_Test
             Assert.AreEqual(expected, actual);
         }
 
+        //Testing if the constructor correctly saves the data inputted
         [TestMethod]
         public void TestCustomerDataConstructor()
         {
