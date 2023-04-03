@@ -1,8 +1,5 @@
 ﻿namespace Customers
-{
-    public class CustomerData
-    {
-     /*
+{     /*
      * Class to store Customer Data and perform necessary calculations for electic bill
      * 
      * Author: Peter
@@ -10,12 +7,16 @@
      * When: April 2023
      * 
      */
+    public class CustomerData
+    {
+        //required parameters
         public int AccountNo { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public decimal kWhUsed { get; set; }
         public decimal BillAmount { get; set; }
 
+        //Constructor
         public CustomerData(int accountNo, string firstName, string lastName, decimal KWHUsed)
         {
             AccountNo = accountNo;
@@ -25,6 +26,7 @@
             BillAmount = CalculateCharge();
         }
 
+        //Function to calculate charges
         public decimal CalculateCharge()
         {
             const decimal administrativeCharge = 12m;
