@@ -2,7 +2,7 @@ using Customers;
 
 namespace ElectricBill
 {
-    public partial class Form1 : Form
+    public partial class frmElectricBill : Form
     {
         /*
          * Application to calculate electric bill from given inputs
@@ -31,11 +31,11 @@ namespace ElectricBill
         string billHeader = "";
         string addCust = "";
 
-        public Form1()
+        public frmElectricBill()
         {
             InitializeComponent();
 
-            billHeader = "Account # \t First Name \t Last Name \t kWh Used \t Bill Amount";
+            billHeader = "Account # \t First Name Last Name \t \t kWh Used \t Bill Amount";
             lblCustomers.Items.Add(billHeader);
 
             //use datagrid because the formatting is reliable and easy to use
@@ -92,10 +92,11 @@ namespace ElectricBill
                 //add customers to listbox
                 lblCustomers.Items.Add(addCust);
 
-                //clear text boxes to be ready for next customer
+                //clear text boxes to be ready for next customer and focus on first name
                 txtFirstName.Text = "";
                 txtLastName.Text = "";
                 txtkWh.Text = "";
+                txtFirstName.Focus();
             }
         }
     }

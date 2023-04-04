@@ -1,6 +1,6 @@
 ﻿namespace ElectricBill
 {
-    partial class Form1
+    partial class frmElectricBill
     {
         /// <summary>
         ///  Required designer variable.
@@ -50,7 +50,7 @@
             // lblFirstName
             // 
             lblFirstName.AutoSize = true;
-            lblFirstName.Location = new Point(53, 52);
+            lblFirstName.Location = new Point(51, 47);
             lblFirstName.Margin = new Padding(4, 0, 4, 0);
             lblFirstName.Name = "lblFirstName";
             lblFirstName.Size = new Size(100, 21);
@@ -61,7 +61,7 @@
             // lblLastName
             // 
             lblLastName.AutoSize = true;
-            lblLastName.Location = new Point(53, 98);
+            lblLastName.Location = new Point(53, 93);
             lblLastName.Margin = new Padding(4, 0, 4, 0);
             lblLastName.Name = "lblLastName";
             lblLastName.Size = new Size(91, 21);
@@ -72,7 +72,7 @@
             // lblkWh
             // 
             lblkWh.AutoSize = true;
-            lblkWh.Location = new Point(53, 148);
+            lblkWh.Location = new Point(53, 143);
             lblkWh.Margin = new Padding(4, 0, 4, 0);
             lblkWh.Name = "lblkWh";
             lblkWh.Size = new Size(82, 21);
@@ -82,7 +82,7 @@
             // 
             // txtFirstName
             // 
-            txtFirstName.Location = new Point(159, 42);
+            txtFirstName.Location = new Point(159, 47);
             txtFirstName.Margin = new Padding(4, 3, 4, 3);
             txtFirstName.Name = "txtFirstName";
             txtFirstName.Size = new Size(127, 26);
@@ -91,7 +91,7 @@
             // 
             // txtLastName
             // 
-            txtLastName.Location = new Point(159, 88);
+            txtLastName.Location = new Point(159, 93);
             txtLastName.Margin = new Padding(4, 3, 4, 3);
             txtLastName.Name = "txtLastName";
             txtLastName.Size = new Size(127, 26);
@@ -100,7 +100,7 @@
             // 
             // txtkWh
             // 
-            txtkWh.Location = new Point(159, 138);
+            txtkWh.Location = new Point(159, 143);
             txtkWh.Margin = new Padding(4, 3, 4, 3);
             txtkWh.Name = "txtkWh";
             txtkWh.Size = new Size(127, 26);
@@ -120,7 +120,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(332, 201);
+            label1.Location = new Point(268, 190);
             label1.Name = "label1";
             label1.Size = new Size(154, 21);
             label1.TabIndex = 9;
@@ -129,7 +129,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(87, 487);
+            label2.Location = new Point(689, 225);
             label2.Name = "label2";
             label2.Size = new Size(145, 21);
             label2.TabIndex = 10;
@@ -138,7 +138,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(350, 487);
+            label3.Location = new Point(698, 302);
             label3.Name = "label3";
             label3.Size = new Size(136, 21);
             label3.TabIndex = 11;
@@ -147,7 +147,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(636, 487);
+            label4.Location = new Point(707, 379);
             label4.Name = "label4";
             label4.Size = new Size(118, 21);
             label4.TabIndex = 12;
@@ -155,27 +155,30 @@
             // 
             // txtTotalCust
             // 
-            txtTotalCust.Location = new Point(87, 535);
+            txtTotalCust.Location = new Point(718, 249);
             txtTotalCust.Name = "txtTotalCust";
             txtTotalCust.ReadOnly = true;
-            txtTotalCust.Size = new Size(144, 26);
+            txtTotalCust.Size = new Size(92, 26);
             txtTotalCust.TabIndex = 13;
+            txtTotalCust.TextAlign = HorizontalAlignment.Center;
             // 
             // txtAvgBill
             // 
-            txtAvgBill.Location = new Point(636, 535);
+            txtAvgBill.Location = new Point(698, 413);
             txtAvgBill.Name = "txtAvgBill";
             txtAvgBill.ReadOnly = true;
-            txtAvgBill.Size = new Size(109, 26);
+            txtAvgBill.Size = new Size(136, 26);
             txtAvgBill.TabIndex = 14;
+            txtAvgBill.TextAlign = HorizontalAlignment.Center;
             // 
             // txtKWHUsed
             // 
-            txtKWHUsed.Location = new Point(354, 535);
+            txtKWHUsed.Location = new Point(698, 338);
             txtKWHUsed.Name = "txtKWHUsed";
             txtKWHUsed.ReadOnly = true;
-            txtKWHUsed.Size = new Size(116, 26);
+            txtKWHUsed.Size = new Size(136, 26);
             txtKWHUsed.TabIndex = 15;
+            txtKWHUsed.TextAlign = HorizontalAlignment.Center;
             // 
             // dgvCustomers
             // 
@@ -189,23 +192,24 @@
             dgvCustomers.MultiSelect = false;
             dgvCustomers.Name = "dgvCustomers";
             dgvCustomers.ReadOnly = true;
+            dgvCustomers.RowHeadersWidth = 50;
             dgvCustomers.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgvCustomers.RowTemplate.Height = 25;
             dgvCustomers.RowTemplate.Resizable = DataGridViewTriState.True;
             dgvCustomers.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvCustomers.Size = new Size(763, 228);
+            dgvCustomers.Size = new Size(555, 225);
             dgvCustomers.TabIndex = 16;
             // 
             // lblCustomers
             // 
             lblCustomers.FormattingEnabled = true;
             lblCustomers.ItemHeight = 21;
-            lblCustomers.Location = new Point(71, 567);
+            lblCustomers.Location = new Point(71, 456);
             lblCustomers.Name = "lblCustomers";
             lblCustomers.Size = new Size(763, 214);
             lblCustomers.TabIndex = 17;
             // 
-            // Form1
+            // frmElectricBill
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -229,7 +233,7 @@
             Controls.Add(lblFirstName);
             Font = new Font("Cascadia Mono", 12F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4, 3, 4, 3);
-            Name = "Form1";
+            Name = "frmElectricBill";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dgvCustomers).EndInit();
             ResumeLayout(false);
