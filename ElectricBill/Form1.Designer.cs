@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lbCustomers = new ListBox();
             lblFirstName = new Label();
             lblLastName = new Label();
             lblkWh = new Label();
@@ -43,18 +42,10 @@
             txtTotalCust = new TextBox();
             txtAvgBill = new TextBox();
             txtKWHUsed = new TextBox();
+            dgvCustomers = new DataGridView();
+            lblCustomers = new ListBox();
+            ((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
             SuspendLayout();
-            // 
-            // lbCustomers
-            // 
-            lbCustomers.FormattingEnabled = true;
-            lbCustomers.ItemHeight = 21;
-            lbCustomers.Location = new Point(53, 251);
-            lbCustomers.Margin = new Padding(4, 3, 4, 3);
-            lbCustomers.Name = "lbCustomers";
-            lbCustomers.Size = new Size(785, 193);
-            lbCustomers.TabIndex = 0;
-            lbCustomers.Tag = "Customer List";
             // 
             // lblFirstName
             // 
@@ -118,7 +109,7 @@
             // 
             // btnBill
             // 
-            btnBill.Location = new Point(318, 73);
+            btnBill.Location = new Point(548, 60);
             btnBill.Name = "btnBill";
             btnBill.Size = new Size(197, 59);
             btnBill.TabIndex = 7;
@@ -147,7 +138,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(354, 487);
+            label3.Location = new Point(350, 487);
             label3.Name = "label3";
             label3.Size = new Size(136, 21);
             label3.TabIndex = 11;
@@ -156,7 +147,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(627, 487);
+            label4.Location = new Point(636, 487);
             label4.Name = "label4";
             label4.Size = new Size(118, 21);
             label4.TabIndex = 12;
@@ -172,7 +163,7 @@
             // 
             // txtAvgBill
             // 
-            txtAvgBill.Location = new Point(627, 535);
+            txtAvgBill.Location = new Point(636, 535);
             txtAvgBill.Name = "txtAvgBill";
             txtAvgBill.ReadOnly = true;
             txtAvgBill.Size = new Size(109, 26);
@@ -186,11 +177,42 @@
             txtKWHUsed.Size = new Size(116, 26);
             txtKWHUsed.TabIndex = 15;
             // 
+            // dgvCustomers
+            // 
+            dgvCustomers.AllowUserToOrderColumns = true;
+            dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvCustomers.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvCustomers.BackgroundColor = SystemColors.Control;
+            dgvCustomers.BorderStyle = BorderStyle.Fixed3D;
+            dgvCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCustomers.Location = new Point(71, 225);
+            dgvCustomers.MultiSelect = false;
+            dgvCustomers.Name = "dgvCustomers";
+            dgvCustomers.ReadOnly = true;
+            dgvCustomers.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvCustomers.RowTemplate.Height = 25;
+            dgvCustomers.RowTemplate.Resizable = DataGridViewTriState.True;
+            dgvCustomers.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgvCustomers.Size = new Size(763, 228);
+            dgvCustomers.TabIndex = 16;
+            // 
+            // lblCustomers
+            // 
+            lblCustomers.FormattingEnabled = true;
+            lblCustomers.ItemHeight = 21;
+            lblCustomers.Location = new Point(71, 567);
+            lblCustomers.Name = "lblCustomers";
+            lblCustomers.Size = new Size(763, 214);
+            lblCustomers.TabIndex = 17;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(909, 785);
+            Controls.Add(lblCustomers);
+            Controls.Add(dgvCustomers);
             Controls.Add(txtKWHUsed);
             Controls.Add(txtAvgBill);
             Controls.Add(txtTotalCust);
@@ -205,18 +227,16 @@
             Controls.Add(lblkWh);
             Controls.Add(lblLastName);
             Controls.Add(lblFirstName);
-            Controls.Add(lbCustomers);
             Font = new Font("Cascadia Mono", 12F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4, 3, 4, 3);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dgvCustomers).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private ListBox lbCustomers;
         private Label lblFirstName;
         private Label lblLastName;
         private Label lblkWh;
@@ -231,5 +251,13 @@
         private TextBox txtTotalCust;
         private TextBox txtAvgBill;
         private TextBox txtKWHUsed;
+        private DataGridView dgvCustomers;
+        private DataGridViewTextBoxColumn accountNoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn kWhUsedDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn billAmountDataGridViewTextBoxColumn;
+        private BindingSource customerDataBindingSource;
+        private ListBox lblCustomers;
     }
 }

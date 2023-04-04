@@ -85,6 +85,35 @@ namespace ElectricBill
         }
 
         /// <summary>
+        /// checks if textbox contains an non-negative decimal value
+        /// </summary>
+        /// <param name="textBox">text box to check (Tag Property is set)</param>
+        /// <returns>True if valid, false if not</returns>
+        public static bool IsNonNegativeDecimal(TextBox textBox)
+        {
+            bool isValid = true;
+
+            decimal result;
+
+            if (!Decimal.TryParse(textBox.Text, out result)) // not a decimal
+            {
+                MessageBox.Show(textBox.Tag + " has to be a number");
+                textBox.SelectAll(); //select all text in the box for replacement
+                textBox.Focus();
+                isValid = false;
+            }
+            else if (result < 0) // is a decimal but negative
+            {
+                MessageBox.Show(textBox.Tag + " has to be a postive number or zero");
+                textBox.SelectAll(); //select all text in the box for replacement
+                textBox.Focus();
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        /// <summary>
         /// checks if textbox contains an int value in a given range
         /// </summary>
         /// <param name="textBox">text box to check</param>
